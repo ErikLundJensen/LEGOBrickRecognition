@@ -10,7 +10,7 @@ My focus is to make it easy to generate images that can be used for training cNN
 3) White light to catch proper colors
 4) Non-reflective background to avoid refections / "corona" around items.
 
-###Solution in short
+### Solution in short
 ad 1)
 The first requirement can be solved by constructing a machine that can flip an item into the air -- to avoid dropping the item this could be done within a box.
 
@@ -23,7 +23,7 @@ However, the trained cNN captured additional lighting around the items as the co
 (The machine must be able to change the background to handle items of many different colors. For example use black for all non-gray, black or dark items. Those items may be captured by using a green background. By splitting the frame grabbing into two background colors ease the task of automating the image grabbing. In practice it requires two boxes of different colors -- in theory, a semi-transparent box surrounded by led lights could change the color from white to green, however, at a risk of getting reflection.)
 
 
-###Low Cost solutions
+### Low Cost solutions
 
 The solution should be low cost and make it affordable for students at all levels.
 
@@ -43,11 +43,11 @@ Use whatever material you have at hand. My prototype is built from LEGO bricks, 
 Using this prototype I have been able to grab 17.000 images of 28 different LEGO bricks in less than two hours "
 
 
-##Setup
+## Setup
 
 Lets get to the technical setup. I have used the following hardware and software:
 
-###Hardware
+### Hardware
 Pre-processing of images and learning:
 NVIDIA gtx 1080
 
@@ -58,7 +58,7 @@ Camera:
 On-board camera at the TX1 developer board.
 
 
-###Software
+### Software
 
 To get started read the very good guide written by Dustin Franklin at NVIDIA corporation.
 https://github.com/dusty-nv/jetson-inference
@@ -70,7 +70,7 @@ After installing Digits you may return to the guide written by Dustin (see "Impo
 
 Until now the utility imagemagick has been used for pre-processing of images.
 
-###Machine
+### Machine
 
 LEGO bricks
 LEGO Mindstorm EV3 (for motor control, however, this is very simple controls that could be managed by any I2C device)
@@ -88,7 +88,7 @@ Getting the item out of the box is a bit tricky; in my case I tilt or lift the b
 If the box is build from some acryl plates with a hinge on one of the sides then that would be more elegant.
 When it comes to it you want the item to get out of the box fast to get on with the next item.
 
-###Process
+### Process
 
 Capturing 5 images per second for 1 minut gives 300 images for each item.
 Gathering verification and test images as well will increase the recording periode (getting 25% for verification and 10% for test).
@@ -98,7 +98,7 @@ Therefore my next step is to look into training an object detection cNN which ca
 
 
 
-##Disclamer:
+## Disclamer:
 "LEGO®is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this project"
 
 
